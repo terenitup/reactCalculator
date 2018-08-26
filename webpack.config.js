@@ -11,8 +11,15 @@ const config = {
       {
         test: /\.(js|jsx)$/, // check for .js and .jsx files (uses Regex)
         loader: 'babel-loader' // use these loaders for .js and .jsx files found
+      },
+      {
+          test: /\.css$/,
+          loaders: ['style-loader', 'css-loader']
       }
     ]
+  },
+  resolve: {
+      extensions: ['.js', '.jsx']
   }
 };
 
